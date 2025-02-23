@@ -1,0 +1,26 @@
+Q1 You are required to read the lab manual and implement all the queries mentioned
+in the manual.
+SELECT * from tabs;
+SELECT * from departments;
+SELECT department_id, department_name
+FROM departments;
+SELECT Employee_ID, First_Name, Salary, 12*Salary+100 from employees;
+SELECT first_name “Name”, salary*12 “Annual Salary” from employees;
+SELECT DISTINCT department_id from employees;
+DESCRIBE employees;
+SELECT first_name, job_id, department_id FROM employees WHERE job_id='AD_PRES';
+SELECT first_name, salary from employees where salary<=10000;
+SELECT first_name, salary from employees where salary between 1000 and 15000;
+SELECT employee_id,first_name, salary,manager_id from employees where manager_id in
+(100,102,103);
+SELECT first_name from employees where first_name like 'S%';
+SELECT first_name from employees where first_name like 'A%';
+SELECT first_name,manager_id from employees where manager_id is null;
+Q2 Display all records whose first name contains ‘a’;
+SELECT first_name from employees where first_name like 'a%';
+Q3 Write a query to display employee number, salary and manager number of those
+employees Whose salary range 2000 to 8000
+SELECT employee_id, salary, manager_id from employees where salary between 2000 and 8000;
+Q4. Display job number, employee id and salary of those employee whose salary is
+2000, 5000 and 8000
+select job_id, employee_id, salary from employees where salary in (2000, 5000, 8000)
