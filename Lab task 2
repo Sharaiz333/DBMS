@@ -1,0 +1,85 @@
+[Q1] Implement all the queries.
+
+Create Table lab57288
+(ID number(10),
+Name Varchar(30) not null,
+Mobile_number number(15)
+);
+ 
+
+select * from tabs;
+ 
+desc lab57288;
+ 
+create table pk57288(
+ID number(10),
+Name varchar(30) not null,
+constraint id_pk57288 primary key(id)
+);
+ 
+Desc pk57288
+ 
+insert into JK57288(id, name)
+values('57288','Sharaiz');
+ 
+truncate table JK57288;
+ 
+create table Ck57288(
+ID number(10),
+Name varchar(30) not null,
+constraint id_fk foreign key(id)
+REFERENCES PK57288(ID)
+);
+ 
+
+ALTER TABLE CK57288
+MODIFY name VARCHAR2(50);
+ 
+ALTER TABLE CK57288
+Add Mobile_number Number(12);
+ 
+
+[Q2]
+CREATE TABLE vehicle57288 (
+    vehicle_id number PRIMARY KEY,
+    vehicle_name VARCHAR(50) UNIQUE,
+    engineer_cc number,
+    model VARCHAR(50)
+);
+ 
+[Q3] CREATE TABLE course57288 (
+    course_id number PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL 
+);
+ 
+
+CREATE TABLE student57288 (
+    student_id NUMBER PRIMARY KEY,            
+    student_name VARCHAR(100) NOT NULL,     
+    course_id number,
+    FOREIGN KEY (course_id) REFERENCES course57288(course_id)
+);
+ 
+[Q4]  
+Drop Table course57288 Cascade Constraints;
+
+
+[Q5]
+ Alter table vehicle57288
+Add Make_Year Number(5);
+
+
+[Q6] 
+Create table Hotel57288(
+Hotel_Number Number(15) not null PRIMARY KEY,
+Hotel_Name Varchar(30) Default ‘Tabaq’,
+Hotel_charges Decimal(10,2)
+);
+
+
+Insert into Hotel57288(Hotel_Number,Hotel_Name,Hotel_Charges)
+Values (1, DEFAULT, 120.50), 
+(2, 'Pearl Continental', 300.75),
+ (3, 'Serena Hotel', 450.00),
+ (4, 'Islamabad Hotel', 200.25),
+ (5, 'Marriott', 350.60);
